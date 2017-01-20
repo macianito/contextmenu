@@ -61,11 +61,11 @@ this.ContextMenu = (function($) {
       // s'ha d'evitar les memory leaks i fer tota la pesca de desreferenciar l'objecte
     };
 
-    ContextMenu.prototype.attachContextMenuToElement = function(selector) {
+    ContextMenu.prototype.attachContextMenuToElement = function(element) {
 
        var self = this;
 
-       $(selector).on('contextmenu', function(evt) { // per obrir el contextmenu abans era mousedown
+       $(element).on('mousedown', function(evt) { // per obrir el contextmenu
 
           evt.preventDefault();
 
@@ -74,16 +74,7 @@ this.ContextMenu = (function($) {
               self.openContextMenu(evt);
             }
           }
-
-          return false;
        });
-
-       /* $(selector).on('contextmenu', function(evt) {
-         console.log(evt.which)
-         return false;
-       }); */
-
-
 
     };
 
