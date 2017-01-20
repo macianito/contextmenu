@@ -1,0 +1,34 @@
+/* context menu
+ ****************/
+
+.context-menu {
+  position: absolute;
+  padding: 0;
+  background: #ddd;
+  display: none;
+  min-width: 120px;
+
+}
+
+.context-menu ul,
+.context-menu .item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.context-menu .item {
+  cursor: pointer;
+  padding: 0 7px;
+}
+
+.delimiter {
+  border-top: 2px outset #777;
+  margin-top: 5px;
+  padding: 0 7px;
+}
+
+li[data-disabled="true"] {
+  color: #bbb;
+}
