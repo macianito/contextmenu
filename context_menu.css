@@ -7,7 +7,7 @@
   background: #ddd;
   display: none;
   min-width: 120px;
-
+  z-index: 99999;
 }
 
 .context-menu ul,
